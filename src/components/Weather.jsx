@@ -2,6 +2,8 @@ import React from 'react'
 import './Weather.css'
 import { weatherDetails } from './weatherDetails'
 import { svgStorage } from './svgStorage'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro' 
 
 const Weather = ({weather}) => {
 
@@ -16,17 +18,43 @@ return (
     style={{background: `linear-gradient(${weatherDetails?.[currentWeather]?.gradient[0]}, ${weatherDetails?.[currentWeather]?.gradient[1]})` }}
     >
         <div className='half1'>
-        {/* {svgStorage['cloudy']}
-		{svgStorage['lightning']}
-		{svgStorage['rainy']}
-		{svgStorage['pouring']}
-		{svgStorage['snow']}
-		{svgStorage['fog']}
-		{svgStorage['windy']}
-		{svgStorage['dust']}
-		{svgStorage['tornado']}
-		{svgStorage['sunny']} */}
-		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 68.52" xmlSpace="preserve">
+		<FontAwesomeIcon icon={icon({name: 'user-secret'})} /> // Defaults to the Classic family, Solid style
+<FontAwesomeIcon icon={icon({name: 'coffee', style: 'regular'})} /> // Defaults to Classic family
+<FontAwesomeIcon icon={icon({name: 'coffee', family: 'sharp', style: 'solid'})} /> // Setting both family and style
+<FontAwesomeIcon icon={icon({name: 'twitter', style: 'brands'})} /> // A brand icon
+			<div className='svg'>
+				{/* <svg>
+				{svgStorage['lightning']}
+				</svg> */}
+			
+				{/* {svgStorage['cloudy']} */}
+				{/* {svgStorage['lightning']} */}
+				{/* {svgStorage['rainy']} */}
+				{/* {svgStorage['pouring']} */}
+				{/* {svgStorage['snow']} */}
+				{/* {svgStorage['fog']} */}
+				{/* {svgStorage['windy']} */}
+				{/* {svgStorage['dust']} */}
+				{/* {svgStorage['tornado']} */}
+				{/* {svgStorage['sunny']} */}
+			</div>
+
+			<svg >
+                {/* {svgStorage[weatherDetails?.[currentWeather]?.icon]} */}
+				{/* {svgStorage['cloudy']} */}
+				{/* {svgStorage['lightning']} */}
+				{/* {svgStorage['rainy']} */}
+				{/* {svgStorage['pouring']} */}
+				{/* {svgStorage['snow']} */}
+				{/* {svgStorage['fog']} */}
+				{/* {svgStorage['windy']} */}
+				{/* {svgStorage['dust']} */}
+				{/* {svgStorage['tornado']} */}
+				{/* {svgStorage['sunny']} */}
+            </svg>
+
+        
+		{/* <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 68.52" xmlSpace="preserve">
 		{svgStorage['cloudy'] }
 		</svg>
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 68.52" xmlSpace="preserve">
@@ -55,7 +83,7 @@ return (
 		</svg>
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 68.52" xmlSpace="preserve">
 		{svgStorage['sunny'] }
-		</svg>
+		</svg> */}
 		
             <div className='main'>
                 <span className='main2'></span>
