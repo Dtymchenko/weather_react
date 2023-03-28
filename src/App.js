@@ -15,9 +15,13 @@ function App() {
   };
 
   const getWeather = async () => {
-    await axios(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
-    ).then((res) => setWeather(res.data));
+    try {
+      await axios(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+      ).then((res) => setWeather(res.data));
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   React.useEffect(() => {

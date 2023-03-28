@@ -3,7 +3,7 @@ import './Weather.css'
 import Form from './Form'
 import { weatherDetails } from './weatherDetails'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCloudBolt, faCloudRain, faCloudShowersHeavy, faSnowflake, faSmog, faWind, faSun, faTornado, faCloud} from '@fortawesome/free-solid-svg-icons'
+
 
 
 const Weather = ({weather, setCity}) => {
@@ -24,7 +24,7 @@ return (
 		
             <div className='main'>		
                 <span className='main2'>
-					<FontAwesomeIcon icon={faCloud} />
+					<FontAwesomeIcon icon={weatherDetails?.[currentWeather]?.icon} />
 				</span>
                 <span className='text'>City: {weather?.name}, {weather?.sys?.country}</span>
                 <span className='text'>Current temperature: {Math.round(weather?.main?.temp)}°</span>
